@@ -13,7 +13,6 @@ window.onload = () => {
     }))
 }
 
-
 function creatDivs(col , rows) {
     for(let i = 0;i < (col * rows); i++) {
         const div = document.createElement('div') 
@@ -22,7 +21,7 @@ function creatDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
-creatDivs(40,4)
+creatDivs(30,30)
 
 function grayColor() { 
     
@@ -38,7 +37,6 @@ function grayColor() {
     buttonsContainer.appendChild(btnGray).classList.add('btn')
 }
 grayColor()
-
 
 function rgbColors() {
     
@@ -82,10 +80,10 @@ function reSize() {
    
     btnSize.textContent = 'reset/tamaño cuadricula'
     btnSize.addEventListener('click', () => {
-        let user = prompt('¿de cuantos cuadritos quieres tu cuadricula lienzo para pintar? si das click a aceptar sin poner cantidad será de 40*40 (máximo 100).')
+        let user = prompt('¿de cuantos cuadritos quieres tu cuadricula lienzo para pintar? si das click a aceptar sin poner cantidad será de 30*30 (máximo 100).')
         if(user === null || user < 1){
             reSet();
-            creatDivs(40,40);
+            creatDivs(16,16);
             grayColor();
             rgbColors();
             blackColor();
@@ -124,3 +122,4 @@ function backgrooundAnim() {
 }
 
 setInterval(backgrooundAnim, 150);
+
