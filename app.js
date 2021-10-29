@@ -21,7 +21,7 @@ function creatDivs(col , rows) {
         container.appendChild(div).classList.add('box')
     }
 }
-creatDivs(30,30)
+creatDivs(16,16)
 
 function grayColor() { 
     
@@ -80,7 +80,7 @@ function reSize() {
    
     btnSize.textContent = 'reset/tamaño cuadricula'
     btnSize.addEventListener('click', () => {
-        let user = prompt('¿de cuantos cuadritos quieres tu cuadricula lienzo para pintar? si das click a aceptar sin poner cantidad será de 30*30 (máximo 100).')
+        let user = prompt('¿de cuantos cuadritos quieres tu cuadricula lienzo para pintar? si das click a aceptar sin poner cantidad será de 16*16 (máximo 100).')
         if(user === null || user < 1){
             reSet();
             creatDivs(16,16);
